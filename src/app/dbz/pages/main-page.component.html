@@ -1,0 +1,17 @@
+<h1>Dragon Ball</h1>
+<hr />
+<div class="row">
+  <div class="row">
+    <div class="col" *ngIf="characters.length > 0">
+      <dbz-list
+        (onDeleteCharacter)="onDeleteCharacter($event)"
+        [listCharacters]="characters"
+      ></dbz-list>
+    </div>
+    <div class="col">
+      <dbz-add-character
+        (onNewCharacter)="onNewCharacter($event)"
+      ></dbz-add-character>
+    </div>
+  </div>
+</div>
